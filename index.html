@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPONS 2027, Berlin</title>
+<meta name="description" content="The 29th International Nursing Philosophy Conference, at Charité Mitte, Berlin, 28 to 30 July 2027.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" href="/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Hallmark · shape: One-screen holding page · genre: playful · theme: Werkstatt (by request, accents swapped to compost) · job: attend · draw: b358a1
+ * hero: Index · nav: edge-aligned wordmark and one action · footer: colophon · imagery: none · signature: the three days as boxed date cells · werkstatt: blue
+ * axes: mid/geometric-sans/warm · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S3 R5 V3 · weakest: S, a holding page says little by design; kept the dates large and cut every other claim */
+/* Hallmark · dismissed 77 · a one-screen holding page by decision: it stays this size until the committee has approved the draft behind it */
+
+:root {
+  color-scheme: light;
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  --font-display: "Jost", "Futura", "Century Gothic", sans-serif; --font-body: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-bar: 2px; --rule-box: 3px;
+  --shadow-card: none;
+  --tracking-display: -0.005em; --display-weight: 700;
+}
+
+:root {
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150); --color-night: oklch(18% 0.008 60);
+  --color-paper: oklch(46.4% 0.233 267); --color-paper-2: oklch(40% 0.22 267); --color-paper-3: oklch(51% 0.2 267);
+  --color-ink: oklch(96% 0.012 82); --color-ink-2: oklch(91% 0.016 82); --color-muted: oklch(88% 0.03 270);
+  --color-rule: oklch(72% 0.12 267);
+  --color-accent: oklch(86.1% 0.159 86); --color-accent-2: oklch(67.8% 0.239 356); --color-accent-3: oklch(86.1% 0.159 86); --color-accent-4: oklch(90.2% 0.192 123);
+  --color-accent-ink: var(--color-night); --color-focus: oklch(86.1% 0.159 86);
+  --color-action: var(--color-accent-3); --color-action-hover: oklch(91% 0.14 90); --color-action-ink: var(--color-night);
+  --color-field: var(--color-paper); --color-field-ink: var(--color-ink); --color-field-focus: var(--color-accent-3);
+}
+
+@font-face { font-family: "Jost"; font-style: normal; font-display: swap; font-weight: 100 900; src: url("/fonts/jost-latin-ext-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Jost"; font-style: normal; font-display: swap; font-weight: 100 900; src: url("/fonts/jost-latin-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Karla"; font-style: normal; font-display: swap; font-weight: 200 800; src: url("/fonts/karla-latin-ext-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Karla"; font-style: normal; font-display: swap; font-weight: 200 800; src: url("/fonts/karla-latin-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scrollbar-color: var(--color-muted) var(--color-paper); scroll-padding-top: var(--space-3xl); }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--text-md); line-height: 1.55; -webkit-font-smoothing: antialiased; caret-color: var(--color-accent); }
+::selection { background: var(--color-accent-3); color: var(--color-night); }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--display-weight, 700); font-synthesis: none; letter-spacing: var(--tracking-display); line-height: 1.05; overflow-wrap: break-word; min-width: 0; text-wrap: balance; text-transform: uppercase; }
+h1 { max-width: 20ch; font-size: var(--text-display); } h2 { max-width: 30ch; font-size: var(--text-section); } h3 { max-width: 40ch; font-size: var(--text-title); line-height: 1.2; }
+.lead { font-size: var(--text-lead); line-height: 1.45; max-width: 52ch; }
+p { margin: 0; text-wrap: pretty; }
+p:not([class]) { max-width: 65ch; }
+img, video { max-width: 100%; height: auto; display: block; }
+svg { display: block; }
+ol, ul { margin: 0; padding: 0; list-style: none; }
+[hidden] { display: none !important; }
+button, input, select, textarea { font: inherit; }
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); box-sizing: border-box; }
+.num { font-variant-numeric: tabular-nums; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 60rem) { :root { --gutter: 24px; --section-gap-s: 80px; --section-gap: 96px; --section-gap-l: 120px; } }
+@media (max-width: 40rem) { :root { --gutter: 16px; --section-gap-s: 56px; --section-gap: 72px; --section-gap-l: 96px; --gap-columns: 16px; } }
+@media (prefers-reduced-motion: reduce) { *:not(.keep-motion), *:not(.keep-motion)::before, *:not(.keep-motion)::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+.skip { position: absolute; left: var(--space-md); top: calc(-1 * var(--space-3xl)); z-index: var(--z-toast); padding: var(--space-xs) var(--space-md); background: var(--color-ink); color: var(--color-paper); }
+.skip:focus-visible { top: var(--space-md); }
+
+.wordmark { font: 700 var(--text-xl)/1 var(--font-display); text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+.wordmark:hover { text-decoration: underline; text-decoration-thickness: 3px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-lg); border: var(--rule-bar) solid var(--color-action); border-radius: var(--radius-pill); background: var(--color-action); color: var(--color-action-ink); font: 600 var(--text-md)/1 var(--font-body); text-transform: uppercase; white-space: nowrap; text-decoration: none; cursor: pointer; transition: background-color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out), transform var(--dur-micro) var(--ease-out); }
+.btn:hover { background: var(--color-action-hover); border-color: var(--color-action-hover); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; transform: none; }
+.btn[aria-busy="true"] { cursor: progress; }
+.btn--quiet { background: transparent; border-color: var(--color-ink); color: var(--color-ink); }
+.btn--quiet:hover { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-paper); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: background-color var(--dur-short) linear, border-color var(--dur-short) linear; } }
+
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+
+.bar { position: sticky; top: 0; z-index: var(--z-sticky-nav); background: var(--color-paper); border-bottom: var(--rule-bar) solid var(--color-ink); transition: transform var(--dur-short) var(--ease-out); }
+.bar.is-hidden { transform: translateY(-100%); }
+.bar__row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 72px; }
+.bar__links { display: flex; gap: var(--space-xl); }
+.bar__links a { font-weight: 600; text-decoration: none; padding-block: var(--space-xs); border-bottom: var(--rule-bar) solid transparent; }
+.bar__links a:hover { border-bottom-color: var(--color-ink); }
+@media (max-width: 60rem) { .bar__links { display: none; } .bar__row { min-height: 64px; } }
+@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+
+.days { display: block; }
+.day { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: stretch; min-height: 160px; border: var(--rule-box) solid var(--color-ink); background: var(--color-paper-3); margin-top: calc(-1 * var(--rule-box)); }
+.day:first-child { margin-top: 0; }
+.day time { display: flex; align-items: center; gap: var(--space-sm); padding: var(--space-lg); border-right: var(--rule-box) solid var(--color-ink); }
+.day time b { font: 700 var(--text-display-s)/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.day time span { font: 700 var(--text-title)/1 var(--font-display); text-transform: uppercase; }
+.day__body { display: flex; flex-direction: column; justify-content: center; gap: var(--space-2xs); padding: var(--space-lg); min-width: 0; }
+.day__name { font: 700 var(--text-title)/1.1 var(--font-display); text-transform: uppercase; }
+.day__theme { color: var(--color-muted); }
+
+.key { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: var(--rule-box) solid var(--color-ink); margin-top: calc(-1 * var(--rule-box)); }
+.key li { display: flex; align-items: center; min-height: 72px; padding: var(--space-sm) var(--space-md); font: 700 var(--text-md)/1.1 var(--font-display); text-transform: uppercase; border-left: var(--rule-box) solid var(--color-ink); }
+.key li:first-child { border-left: 0; }
+.key__blue { background: var(--color-accent); color: var(--color-accent-ink); }
+.key__pink { background: var(--color-accent-2); color: var(--color-night); }
+.key__lime { background: var(--color-accent-4); color: var(--color-night); }
+@media (max-width: 40rem) { .key { grid-template-columns: minmax(0, 1fr); } .key li { min-height: 56px; border-left: 0; border-top: var(--rule-box) solid var(--color-ink); } .key li:first-child { border-top: 0; } .bar__row { gap: var(--space-sm); } .bar .wordmark { font-size: var(--text-lg); } .bar .btn { padding-inline: var(--space-sm); font-size: var(--text-sm); } .day { grid-template-columns: minmax(0, 1fr); } .day time { border-right: 0; border-bottom: var(--rule-box) solid var(--color-ink); } }
+
+body { display: flex; flex-direction: column; min-height: 100dvh; }
+.bar--static { position: static; transition: none; }
+main { flex: 1; display: flex; flex-direction: column; }
+.hero { flex: 1; display: grid; align-items: center; padding-block: var(--space-xl); }
+.hero__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap-columns); align-items: center; }
+.hero__text { grid-column: 1 / 7; display: grid; gap: var(--space-lg); align-content: center; min-width: 0; }
+.hero__index { grid-column: 7 / 13; min-width: 0; }
+@media (max-width: 60rem) { .hero__text, .hero__index { grid-column: 1 / -1; } .hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); } }
+.foot { border-top: var(--rule-bar) solid var(--color-ink); padding-block: var(--space-lg); }
+.foot p { max-width: none; font-size: var(--text-sm); }
+.day { min-height: 176px; }
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar bar--static">
+  <div class="container bar__row">
+    <a class="wordmark" href="/" aria-label="IPONS 2027, Berlin">IPONS 2027</a>
+    <a class="btn btn--quiet" href="mailto:ipons2027@ipons2027.com">Write to us</a>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1>IPONS 2027, Berlin</h1>
+        <p class="lead">The 29th International Nursing Philosophy Conference, at Charité Mitte, Berlin.</p>
+        <div class="actions">
+          <a class="btn" href="/draft/">Committee access</a>
+        </div>
+      </div>
+      <div class="hero__index">
+        <ol class="days" aria-label="The three days of the conference">
+          <li class="day"><time datetime="2027-07-28"><b class="num">28</b><span>July</span></time><div class="day__body"><strong class="day__name">Wednesday</strong></div></li>
+          <li class="day"><time datetime="2027-07-29"><b class="num">29</b><span>July</span></time><div class="day__body"><strong class="day__name">Thursday</strong></div></li>
+          <li class="day"><time datetime="2027-07-30"><b class="num">30</b><span>July</span></time><div class="day__body"><strong class="day__name">Friday</strong></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <p>Hosted by Charité Universitätsmedizin Berlin in partnership with <a href="https://ipons.online/">IPONS</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
