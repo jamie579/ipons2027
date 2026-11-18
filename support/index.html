@@ -213,16 +213,55 @@ button, input, select, textarea { font: inherit; }
 .support-contact .btn { max-width: 100%; padding-block: var(--space-sm); white-space: normal; text-align: center; line-height: 1.25; }
 @media (max-width: 40rem) { .support-hero, .support-main { padding-block: var(--space-xl); } }
 
+/* Shared navigation for the complete public conference site. */
+.public-header { background: var(--color-paper); border-bottom: var(--rule-bar) solid var(--color-ink); }
+.public-header__row { display: grid; grid-template-columns: minmax(13rem, 1fr) auto auto; align-items: center; gap: var(--space-lg); padding-block: var(--space-md); }
+.public-header__brand { max-width: 29ch; }
+.public-nav ul { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs) var(--space-lg); }
+.public-nav a { display: inline-flex; align-items: center; min-height: 36px; font-size: var(--text-sm); font-weight: 600; text-decoration: none; }
+.public-nav a:hover, .public-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+.public-header__action { padding-inline: var(--space-md); font-size: var(--text-sm); }
+.public-footer { padding-block: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); }
+.public-footer__links { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); margin-bottom: var(--space-lg); }
+.public-footer__links a { display: inline-block; padding-block: var(--space-2xs); font-size: var(--text-sm); font-weight: 600; }
+.public-footer__links a[aria-current="page"] { text-decoration-thickness: 3px; }
+.public-footer p, .public-footer details { max-width: 85ch; font-size: var(--text-sm); }
+.public-footer p + p, .public-footer details { margin-top: var(--space-sm); }
+.public-footer .foot__credits { margin-top: var(--space-lg); }
+@media (max-width: 75rem) {
+  .public-header__row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-sm) var(--space-lg); }
+  .public-header__action { grid-column: 2; grid-row: 1; }
+  .public-nav { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (max-width: 40rem) {
+  .public-header__row { column-gap: var(--space-sm); padding-block: var(--space-sm); }
+  .public-header__brand { font-size: var(--text-md); }
+  .public-header__action { max-width: 9rem; padding-inline: var(--space-xs); white-space: normal; text-align: center; line-height: 1.2; }
+  .public-nav ul { gap: 0 var(--space-md); }
+  .public-footer__links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar bar--static">
-  <div class="container bar__row">
-    <a class="wordmark" href="/" aria-label="International Nursing Philosophy Conference, back to the site">International Nursing Philosophy Conference</a>
-    <a class="btn btn--quiet" href="/">Back to the site</a>
+<header class="public-header">
+  <div class="container public-header__row">
+    <a class="wordmark public-header__brand" href="/" aria-label="IPONS 2027 conference home">International Nursing Philosophy Conference</a>
+    <nav class="public-nav" aria-label="Conference navigation">
+      <ul>
+        <li><a href="/call/">Theme and call</a></li>
+        <li><a href="/programme/">Programme</a></li>
+        <li><a href="/visit/">Visit</a></li>
+        <li><a href="/register/">Registration</a></li>
+        <li><a href="/committee/">Committee</a></li>
+        <li><a href="/support/" aria-current="page">Support</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--quiet public-header__action" href="/submit/">Submit your work</a>
   </div>
 </header>
+
 <main id="main">
   <section class="support-hero" aria-labelledby="support-title">
     <div class="container">
@@ -266,11 +305,26 @@ button, input, select, textarea { font: inherit; }
     </ul>
   </div>
 </aside>
-<footer class="foot">
+<footer class="public-footer">
   <div class="container">
+    <nav aria-label="Explore the conference">
+      <ul class="public-footer__links">
+        <li><a href="/">Conference overview</a></li>
+        <li><a href="/call/">Theme and call for abstracts</a></li>
+        <li><a href="/submit/">Submit your work</a></li>
+        <li><a href="/programme/">Programme</a></li>
+        <li><a href="/visit/">Plan your visit</a></li>
+        <li><a href="/register/">Registration and fees</a></li>
+        <li><a href="/committee/">Meet the committee</a></li>
+        <li><a href="/support/">Support the conference</a></li>
+      </ul>
+    </nav>
     <p>The 29th International Nursing Philosophy Conference, at Charité, Berlin, and online, 28–30 July 2027. In association with the <a href="https://ipons.online/">International Philosophy of Nursing Society</a>.</p>
+    <p>Questions? <a href="mailto:contact@ipons2027.com">contact@ipons2027.com</a>.</p>
     <p><a href="/privacy/">Privacy</a> <a href="/impressum/">Impressum</a></p>
+
   </div>
 </footer>
+
 </body>
 </html>
