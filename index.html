@@ -175,6 +175,19 @@ main { flex: 1; display: flex; flex-direction: column; }
 .overview__people span { font-size: var(--text-sm); }
 @media (max-width: 48rem) { .overview__grid { grid-template-columns: 1fr; } }
 
+.affiliations { padding-block: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); background: #fff; color: var(--color-night); }
+.affiliations h2 { font-size: var(--text-sm); letter-spacing: 0.06em; margin-bottom: var(--space-lg); }
+.affiliations__logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg) var(--space-xl); align-items: center; }
+.affiliations__logos a { display: flex; align-items: center; justify-content: center; padding: var(--space-lg); min-height: 9rem; }
+.affiliations__logos img { width: 100%; height: auto; object-fit: contain; }
+.affiliations__charite { max-width: 220px; }
+.affiliations__ipons { max-width: 288px; }
+.affiliations__uci { max-width: 240px; }
+@media (max-width: 40rem) {
+  .affiliations__logos { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .affiliations__logos a { min-height: 0; padding-block: var(--space-md); }
+}
+
 </style>
 </head>
 <body>
@@ -244,6 +257,16 @@ main { flex: 1; display: flex; flex-direction: column; }
     </div>
   </section>
 </main>
+<aside class="affiliations" aria-labelledby="affiliations-heading">
+  <div class="container">
+    <h2 id="affiliations-heading">Affiliations</h2>
+    <ul class="affiliations__logos">
+      <li><a href="https://www.charite.de/en/"><img class="affiliations__charite" src="/img/affiliations/charite.svg" alt="Charité – Universitätsmedizin Berlin" width="2000" height="735" loading="lazy"></a></li>
+      <li><a href="https://ipons.online/"><img class="affiliations__ipons" src="/img/affiliations/ipons.png" alt="International Philosophy of Nursing Society (IPONS)" width="1024" height="341" loading="lazy"></a></li>
+      <li><a href="https://uci.edu/"><img class="affiliations__uci" src="/img/affiliations/uc-irvine.png" alt="University of California, Irvine" width="266" height="45" loading="lazy"></a></li>
+    </ul>
+  </div>
+</aside>
 <footer class="foot">
   <div class="container">
     <p>At Charité – Universitätsmedizin Berlin, in association with <a href="https://ipons.online/">IPONS</a>. <a href="/privacy/">Privacy</a> <a href="/impressum/">Impressum</a> <a href="/draft/">Committee access</a></p>

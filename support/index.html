@@ -174,7 +174,7 @@ button, input, select, textarea { font: inherit; }
 .foot p { max-width: none; font-size: var(--text-sm); }
 .timeline-fig { margin: 0; }
 .sub-main { padding-block: var(--section-gap-s); }
-.prep { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); }
+.prep { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); }
 .box { padding: var(--space-xl) var(--space-xl) var(--space-2xl); border: var(--rule-box) solid var(--color-ink); background: var(--color-paper-3); box-shadow: 8px 8px 0 var(--color-ink); display: grid; gap: var(--space-md); align-content: start; min-width: 0; }
 .box-title { font: 700 var(--text-title)/1.15 var(--font-display); }
 .box ul { display: grid; gap: var(--space-xs); padding-left: var(--space-lg); list-style: disc; }
@@ -184,6 +184,19 @@ button, input, select, textarea { font: inherit; }
 .note { padding: var(--space-md) var(--space-lg); border: var(--rule-box) solid var(--color-ink); background: var(--color-accent-3); color: var(--color-night); font-weight: 600; }
 @media (max-width: 60rem) { .prep { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 40rem) { .box { padding: var(--space-lg); } }
+
+.affiliations { padding-block: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); background: #fff; color: var(--color-night); }
+.affiliations h2 { font-size: var(--text-sm); letter-spacing: 0.06em; margin-bottom: var(--space-lg); }
+.affiliations__logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg) var(--space-xl); align-items: center; }
+.affiliations__logos a { display: flex; align-items: center; justify-content: center; padding: var(--space-lg); min-height: 9rem; }
+.affiliations__logos img { width: 100%; height: auto; object-fit: contain; }
+.affiliations__charite { max-width: 220px; }
+.affiliations__ipons { max-width: 288px; }
+.affiliations__uci { max-width: 240px; }
+@media (max-width: 40rem) {
+  .affiliations__logos { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .affiliations__logos a { min-height: 0; padding-block: var(--space-md); }
+}
 
 .support-hero { background: var(--color-hero-field, var(--color-violet)); border-bottom: var(--rule-box) solid var(--color-ink); padding-block: var(--space-2xl); }
 .support-inner { max-width: 72ch; }
@@ -243,6 +256,16 @@ button, input, select, textarea { font: inherit; }
     </div>
   </div>
 </main>
+<aside class="affiliations" aria-labelledby="affiliations-heading">
+  <div class="container">
+    <h2 id="affiliations-heading">Affiliations</h2>
+    <ul class="affiliations__logos">
+      <li><a href="https://www.charite.de/en/"><img class="affiliations__charite" src="/img/affiliations/charite.svg" alt="Charité – Universitätsmedizin Berlin" width="2000" height="735" loading="lazy"></a></li>
+      <li><a href="https://ipons.online/"><img class="affiliations__ipons" src="/img/affiliations/ipons.png" alt="International Philosophy of Nursing Society (IPONS)" width="1024" height="341" loading="lazy"></a></li>
+      <li><a href="https://uci.edu/"><img class="affiliations__uci" src="/img/affiliations/uc-irvine.png" alt="University of California, Irvine" width="266" height="45" loading="lazy"></a></li>
+    </ul>
+  </div>
+</aside>
 <footer class="foot">
   <div class="container">
     <p>The 29th International Nursing Philosophy Conference, at Charité, Berlin, and online, 28–30 July 2027. In association with the <a href="https://ipons.online/">International Philosophy of Nursing Society</a>.</p>
