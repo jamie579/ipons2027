@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Conference sponsorship and support | IPONS 2027</title>
@@ -23,7 +21,7 @@
 <meta name="twitter:image" content="https://ipons2027.com/img/ipons2027-social.png">
 <meta name="twitter:image:alt" content="IPONS 2027 International Nursing Philosophy Conference: What bodies can do. 28–30 July 2027, Charité, Berlin and online.">
 
-<link rel="preload" href="/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin="">
 <style>
 /* Hallmark · shape: Single-column form page with a ruled timeline · genre: playful · theme: Werkstatt (by request, accents swapped to compost) · job: attend · draw: b358a1
  * hero: Banner, poster headline over a violet field · nav: edge-aligned wordmark and one action · footer: colophon · imagery: none · signature: the four deadlines as ruled date cells · werkstatt: putty
@@ -164,6 +162,9 @@ button, input, select, textarea { font: inherit; }
 
 .assoc { max-width: 38ch; font-size: var(--text-md); font-weight: 600; line-height: 1.4; }
 .assoc a { text-decoration-thickness: 2px; }
+.deadline-notice { max-width: 70ch; padding: var(--space-md) var(--space-lg); border: var(--rule-bar) solid var(--color-ink); background: var(--color-accent-3); color: var(--color-night); }
+.deadline-notice p + p { margin-top: var(--space-xs); }
+.sub-hero .deadline-notice { margin-bottom: var(--space-lg); }
 
 .sub-hero { background: var(--color-hero-field, var(--color-violet)); border-bottom: var(--rule-box) solid var(--color-ink); padding-block: var(--space-2xl); }
 .sub-hero h1 { max-width: none; font-size: var(--text-poster); line-height: 0.95; margin-bottom: var(--space-lg); }
@@ -233,6 +234,17 @@ button, input, select, textarea { font: inherit; }
 .public-nav a { display: inline-flex; align-items: center; min-height: 36px; font-size: var(--text-sm); font-weight: 600; text-decoration: none; }
 .public-nav a:hover, .public-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
 .public-header__action { padding-inline: var(--space-md); font-size: var(--text-sm); }
+.public-header__controls { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-xs); min-width: 0; }
+.language-switcher { position: relative; font-size: var(--text-sm); font-weight: 600; }
+.language-switcher summary { display: flex; align-items: center; gap: var(--space-xs); min-height: 32px; padding: var(--space-2xs) var(--space-xs); cursor: pointer; list-style: none; }
+.language-switcher summary::-webkit-details-marker { display: none; }
+.language-switcher__chevron { width: 0.45em; height: 0.45em; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg); margin: -0.2em 0.2em 0; }
+.language-switcher[open] .language-switcher__chevron { transform: rotate(225deg); margin-top: 0.2em; }
+.language-switcher nav { position: absolute; top: calc(100% + 4px); right: 0; z-index: var(--z-dropdown); min-width: 11rem; background: var(--color-paper); border: var(--rule-bar) solid var(--color-ink); box-shadow: 5px 5px 0 var(--color-ink); }
+.language-switcher a { display: flex; gap: var(--space-xs); align-items: center; min-height: 44px; padding: var(--space-xs) var(--space-md); text-decoration: none; white-space: nowrap; }
+.language-switcher a:hover, .language-switcher a[aria-current] { background: var(--color-accent-3); color: var(--color-night); }
+html:not([lang="en"]) h1, html:not([lang="en"]) h2, html:not([lang="en"]) h3 { hyphens: auto; }
+html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 .public-footer { padding-block: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); }
 .public-footer__links { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); margin-bottom: var(--space-lg); }
 .public-footer__links a { display: inline-block; padding-block: var(--space-2xs); font-size: var(--text-sm); font-weight: 600; }
@@ -243,6 +255,7 @@ button, input, select, textarea { font: inherit; }
 @media (max-width: 75rem) {
   .public-header__row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-sm) var(--space-lg); }
   .public-header__action { grid-column: 2; grid-row: 1; }
+  .public-header__controls { grid-column: 2; grid-row: 1; }
   .public-nav { grid-column: 1 / -1; grid-row: 2; }
 }
 @media (max-width: 40rem) {
@@ -254,6 +267,12 @@ button, input, select, textarea { font: inherit; }
 }
 
 </style>
+
+<link rel="alternate" hreflang="en" href="https://ipons2027.com/support/">
+<link rel="alternate" hreflang="de" href="https://ipons2027.com/de/support/">
+<link rel="alternate" hreflang="fr" href="https://ipons2027.com/fr/support/">
+<link rel="alternate" hreflang="es" href="https://ipons2027.com/es/support/">
+<link rel="alternate" hreflang="x-default" href="https://ipons2027.com/support/">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -270,7 +289,7 @@ button, input, select, textarea { font: inherit; }
         <li><a href="/support/" aria-current="page">Support</a></li>
       </ul>
     </nav>
-    <a class="btn btn--quiet public-header__action" href="/submit/">Submit your work</a>
+    <div class="public-header__controls"><details class="language-switcher"><summary aria-label="Choose language"><span aria-hidden="true">🇬🇧</span> <span lang="en">English</span><span class="language-switcher__chevron" aria-hidden="true"></span></summary><nav aria-label="Choose language"><ul><li><a href="/support/" lang="en" hreflang="en" aria-current="true"><span aria-hidden="true">🇬🇧</span> English</a></li><li><a href="/de/support/" lang="de" hreflang="de"><span aria-hidden="true">🇩🇪</span> Deutsch</a></li><li><a href="/fr/support/" lang="fr" hreflang="fr"><span aria-hidden="true">🇫🇷</span> Français</a></li><li><a href="/es/support/" lang="es" hreflang="es"><span aria-hidden="true">🇪🇸</span> Español</a></li></ul></nav></details><a class="btn btn--quiet public-header__action" href="/submit/">Submit your work</a></div>
   </div>
 </header>
 
@@ -338,5 +357,16 @@ button, input, select, textarea { font: inherit; }
   </div>
 </footer>
 
-</body>
-</html>
+
+
+<script>
+(function () {
+  var menu = document.querySelector('.language-switcher');
+  if (!menu) return;
+  function updateLinks() { menu.querySelectorAll('a').forEach(function (link) { link.hash = location.hash; }); }
+  updateLinks();
+  window.addEventListener('hashchange', updateLinks);
+  document.addEventListener('click', function (event) { if (!menu.contains(event.target)) menu.open = false; });
+  menu.addEventListener('keydown', function (event) { if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary').focus(); } });
+})();
+</script></body></html>

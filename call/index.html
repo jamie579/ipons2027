@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Call for abstracts | IPONS 2027 Nursing Philosophy Conference</title>
@@ -23,7 +21,7 @@
 <meta name="twitter:image" content="https://ipons2027.com/img/ipons2027-social.png">
 <meta name="twitter:image:alt" content="IPONS 2027 International Nursing Philosophy Conference: What bodies can do. 28–30 July 2027, Charité, Berlin and online.">
 
-<link rel="preload" href="/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin="">
 <style>
 /* Hallmark · shape: Single-screen call page, the poster headline over the starting-point tiles · genre: playful · theme: Werkstatt (by request, accents swapped to compost) · job: attend · draw: b358a1
  * hero: Index, the call's headline and statement over a ruled lead · nav: edge-aligned wordmark and one action · footer: colophon · imagery: none · signature: the eight starting-point tiles as one connected, ruled mosaic with a hard shadow · werkstatt: putty
@@ -164,6 +162,9 @@ button, input, select, textarea { font: inherit; }
 
 .assoc { max-width: 38ch; font-size: var(--text-md); font-weight: 600; line-height: 1.4; }
 .assoc a { text-decoration-thickness: 2px; }
+.deadline-notice { max-width: 70ch; padding: var(--space-md) var(--space-lg); border: var(--rule-bar) solid var(--color-ink); background: var(--color-accent-3); color: var(--color-night); }
+.deadline-notice p + p { margin-top: var(--space-xs); }
+.sub-hero .deadline-notice { margin-bottom: var(--space-lg); }
 
 .banner { background: var(--color-ink); color: var(--color-paper); }
 .banner p { padding-block: var(--space-xs); font-size: var(--text-sm); font-weight: 600; }
@@ -351,6 +352,17 @@ html:not(.js) [data-loop-toggle] { display: none; }
 .public-nav a { display: inline-flex; align-items: center; min-height: 36px; font-size: var(--text-sm); font-weight: 600; text-decoration: none; }
 .public-nav a:hover, .public-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
 .public-header__action { padding-inline: var(--space-md); font-size: var(--text-sm); }
+.public-header__controls { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-xs); min-width: 0; }
+.language-switcher { position: relative; font-size: var(--text-sm); font-weight: 600; }
+.language-switcher summary { display: flex; align-items: center; gap: var(--space-xs); min-height: 32px; padding: var(--space-2xs) var(--space-xs); cursor: pointer; list-style: none; }
+.language-switcher summary::-webkit-details-marker { display: none; }
+.language-switcher__chevron { width: 0.45em; height: 0.45em; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg); margin: -0.2em 0.2em 0; }
+.language-switcher[open] .language-switcher__chevron { transform: rotate(225deg); margin-top: 0.2em; }
+.language-switcher nav { position: absolute; top: calc(100% + 4px); right: 0; z-index: var(--z-dropdown); min-width: 11rem; background: var(--color-paper); border: var(--rule-bar) solid var(--color-ink); box-shadow: 5px 5px 0 var(--color-ink); }
+.language-switcher a { display: flex; gap: var(--space-xs); align-items: center; min-height: 44px; padding: var(--space-xs) var(--space-md); text-decoration: none; white-space: nowrap; }
+.language-switcher a:hover, .language-switcher a[aria-current] { background: var(--color-accent-3); color: var(--color-night); }
+html:not([lang="en"]) h1, html:not([lang="en"]) h2, html:not([lang="en"]) h3 { hyphens: auto; }
+html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 .public-footer { padding-block: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); }
 .public-footer__links { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); margin-bottom: var(--space-lg); }
 .public-footer__links a { display: inline-block; padding-block: var(--space-2xs); font-size: var(--text-sm); font-weight: 600; }
@@ -361,6 +373,7 @@ html:not(.js) [data-loop-toggle] { display: none; }
 @media (max-width: 75rem) {
   .public-header__row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-sm) var(--space-lg); }
   .public-header__action { grid-column: 2; grid-row: 1; }
+  .public-header__controls { grid-column: 2; grid-row: 1; }
   .public-nav { grid-column: 1 / -1; grid-row: 2; }
 }
 @media (max-width: 40rem) {
@@ -372,6 +385,12 @@ html:not(.js) [data-loop-toggle] { display: none; }
 }
 
 </style>
+
+<link rel="alternate" hreflang="en" href="https://ipons2027.com/call/">
+<link rel="alternate" hreflang="de" href="https://ipons2027.com/de/call/">
+<link rel="alternate" hreflang="fr" href="https://ipons2027.com/fr/call/">
+<link rel="alternate" hreflang="es" href="https://ipons2027.com/es/call/">
+<link rel="alternate" hreflang="x-default" href="https://ipons2027.com/call/">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -388,7 +407,7 @@ html:not(.js) [data-loop-toggle] { display: none; }
         <li><a href="/support/">Support</a></li>
       </ul>
     </nav>
-    <a class="btn btn--quiet public-header__action" href="/submit/">Submit your work</a>
+    <div class="public-header__controls"><details class="language-switcher"><summary aria-label="Choose language"><span aria-hidden="true">🇬🇧</span> <span lang="en">English</span><span class="language-switcher__chevron" aria-hidden="true"></span></summary><nav aria-label="Choose language"><ul><li><a href="/call/" lang="en" hreflang="en" aria-current="true"><span aria-hidden="true">🇬🇧</span> English</a></li><li><a href="/de/call/" lang="de" hreflang="de"><span aria-hidden="true">🇩🇪</span> Deutsch</a></li><li><a href="/fr/call/" lang="fr" hreflang="fr"><span aria-hidden="true">🇫🇷</span> Français</a></li><li><a href="/es/call/" lang="es" hreflang="es"><span aria-hidden="true">🇪🇸</span> Español</a></li></ul></nav></details><a class="btn btn--quiet public-header__action" href="/submit/">Submit your work</a></div>
   </div>
 </header>
 
@@ -397,6 +416,10 @@ html:not(.js) [data-loop-toggle] { display: none; }
     <div class="container">
       <h1 class="extrude">Call for abstracts</h1>
       <p class="lead call-hero__q">What can a body do?</p>
+      <div class="deadline-notice">
+  <p><strong>Final deadline for all submissions: 31 March 2027.</strong></p>
+  <p>The optional early review round closes on 15 December 2026, with decisions by 15 January 2027 at the latest. Submissions after 15 December are welcome and reviewed on a rolling basis until the final deadline.</p>
+</div>
       <p class="assoc">In association with the International Philosophy of Nursing Society (<a href="https://ipons.online/">IPONS</a>).</p>
       <div class="actions"><a class="btn" href="/submit/">Submit your work</a></div>
     </div>
@@ -407,12 +430,12 @@ html:not(.js) [data-loop-toggle] { display: none; }
       <p>Abstracts for individual presentations, panels, posters, postcards and provocations are welcome in <strong>English, German, French or Spanish</strong>. Plenary sessions will be in English. Sessions in German, French or Spanish will be offered where we receive sufficient submissions in that language, with translation into English. Please indicate your preferred presentation language and, separately, whether you would be able and willing to present in English if a session in your preferred language cannot be offered.</p>
       <figure class="timeline-fig">
   <ol class="timeline" aria-label="Submission deadlines and decision dates">
-    <li class="is-due"><b>15 Dec 2026</b><span>First-round abstract deadline</span></li>
-    <li><b>15 Jan 2027</b><span>First-round decisions at the latest</span></li>
+    <li><b>15 Dec 2026</b><span>Optional early review deadline</span></li>
+    <li><b>15 Jan 2027</b><span>Early-round decisions at the latest</span></li>
     <li class="is-due"><b>31 Mar 2027</b><span>Final submission deadline</span></li>
     <li><b>14 Apr 2027</b><span>All submission decisions sent</span></li>
   </ol>
-  <figcaption class="timeline-note">Submission deadlines close at 23:59 Berlin time. You may hear from us sooner, but all first-round decisions will be sent by 15 January 2027 at the latest. Submissions received after 15 December are reviewed on a rolling basis until 31 March.</figcaption>
+  <figcaption class="timeline-note">The final deadline for every contribution type is 31 March 2027 at 23:59 Berlin time. The December round is optional: submit by 15 December at 23:59 Berlin time if you would like a decision by 15 January 2027 at the latest. You may hear from us sooner.</figcaption>
 </figure>
       <section class="contributions-display" aria-labelledby="display-contributions-title">
   <h2 id="display-contributions-title">Posters, postcards and provocations</h2>
@@ -494,7 +517,7 @@ html:not(.js) [data-loop-toggle] { display: none; }
             <li>Laurin, A.-C., &amp; Martin, P. (2023). Thinking through critical posthumanism: Nursing as political and affirmative becoming. <i>Nursing Inquiry, 31</i>(1). <a href="https://doi.org/10.1111/nin.12606">https://doi.org/10.1111/nin.12606</a></li>
             <li>Sheehan, K. (2022). <i>Constantly becoming with</i> [Video]. The Compost Collaborative. <a href="https://compostcollaborative.online/projects/">https://compostcollaborative.online/projects/</a></li>
             <li>Smith, J. B. (2026). The Camp of Reason: Spinoza’s Ethics as Affirmative Excess. <i>Nursing Philosophy, 27</i>(2). <a href="https://doi.org/10.1111/nup.70081">https://doi.org/10.1111/nup.70081</a></li>
-            <li>Smith, J. B., Willis, E. M., &amp; Hopkins-Walsh, J. (2022). What does person-centred care mean, if you weren’t considered a person anyway: An engagement with person-centred care and Black, queer, feminist, and posthuman approaches. <i>Nursing Philosophy, 23</i>(3). <a href="https://doi.org/10.1111/nup.12401">https://doi.org/10.1111/nup.12401</a></li>
+            <li>Smith, J. B., Willis, E. M., &amp; Hopkins-Walsh, J. (2022). What does person-centred care mean, if you weren’t considered a person anyway: An engagement with&nbsp;person-centred care and Black, queer, feminist, and posthuman approaches. <i>Nursing Philosophy, 23</i>(3). <a href="https://doi.org/10.1111/nup.12401">https://doi.org/10.1111/nup.12401</a></li>
             <li>Smith, J. B., Willis, E., Sheehan, K., &amp; Jones, E. (2025). Making care perceptible: Nursing/intuitive movement/posthuman care. In G. Klumbytė, E. Jones, &amp; R. Braidotti (Eds.), <i>Posthuman convergences: Transdisciplinary methods and practices</i> (pp. 287-313). Edinburgh University Press. <a href="https://doi.org/10.1515/9781399512688-016">https://doi.org/10.1515/9781399512688-016</a></li>
             <li>Tedjasukmana, E. C. (2022). Metastatic growth: The health care industry’s increasing contribution to the plasticene. In J. Dillard-Wright, J. Hopkins-Walsh, &amp; B. B. Brown (Eds.), <i>Nursing a radical imagination: Moving from theory and history to action and alternate futures</i> (pp. 109-133). Routledge. <a href="https://doi.org/10.4324/9781003245957-10">https://doi.org/10.4324/9781003245957-10</a></li>
             <li>Walker, R., Dillard-Wright, J., &amp; Iradukunda, F. (2023). Algorithmic bias in artificial intelligence is a problem, and the root issue is power. <i>Nursing Outlook, 71</i>(5), 102023. <a href="https://doi.org/10.1016/j.outlook.2023.102023">https://doi.org/10.1016/j.outlook.2023.102023</a></li>
@@ -512,7 +535,7 @@ html:not(.js) [data-loop-toggle] { display: none; }
             <li>Bayuo, J. (2026). Relational ontology in a digital world: Integrating African personhood and platformized nursing. <i>Nursing Philosophy, 27</i>(4). <a href="https://doi.org/10.1111/nup.70111">https://doi.org/10.1111/nup.70111</a></li>
             <li>Cleofas, J. V. (2024). Building a Pluriverse of Nursologies: A paradigm for decolonial theory and knowledge development in nursing. <i>Nursing Philosophy, 25</i>(4). <a href="https://doi.org/10.1111/nup.12497">https://doi.org/10.1111/nup.12497</a></li>
             <li>Cleofas, J. V., Cadeliña, J. S., Abesamis, L. E. A., Entila, L. J., &amp; Tanay, C. A. (2026). Don’t mess with <i>Tita Marites</i>: Camp as critique and care in the Filipino nursing diaspora. <i>Nursing Philosophy, 27</i>(2). <a href="https://doi.org/10.1111/nup.70085">https://doi.org/10.1111/nup.70085</a></li>
-            <li>De Sousa, I., &amp; Varcoe, C. (2021). Centering Black feminist thought in nursing praxis. <i>Nursing Inquiry, 29</i>(1). <a href="https://doi.org/10.1111/nin.12473">https://doi.org/10.1111/nin.12473</a></li>
+            <li>De Sousa, I., &amp; Varcoe, C. (2021). Centering Black&nbsp;feminist thought in nursing praxis. <i>Nursing Inquiry, 29</i>(1). <a href="https://doi.org/10.1111/nin.12473">https://doi.org/10.1111/nin.12473</a></li>
             <li>Dillard-Wright, J., Valderama-Wallace, C., Canty, L., Perron, A., De Sousa, I., &amp; Gullick, J. (2023). What nursing chooses not to know: Practices of epistemic silence/silencing. <i>Nursing Philosophy, 24</i>(3). <a href="https://doi.org/10.1111/nup.12443">https://doi.org/10.1111/nup.12443</a></li>
             <li>Graziano, T. (2026). Criptiquing disability models: Compulsory able-bodiedness, nursing practice, and reimagined disability. <i>Nursing Philosophy, 27</i>(2). <a href="https://doi.org/10.1111/nup.70075">https://doi.org/10.1111/nup.70075</a></li>
             <li>Graziano, T. (2026). Camp, nursing, and the politics of seriousness. <i>Nursing Philosophy, 27</i>(3). <a href="https://doi.org/10.1111/nup.70099">https://doi.org/10.1111/nup.70099</a></li>
@@ -576,5 +599,16 @@ html:not(.js) [data-loop-toggle] { display: none; }
   </div>
 </footer>
 
-</body>
-</html>
+
+
+<script>
+(function () {
+  var menu = document.querySelector('.language-switcher');
+  if (!menu) return;
+  function updateLinks() { menu.querySelectorAll('a').forEach(function (link) { link.hash = location.hash; }); }
+  updateLinks();
+  window.addEventListener('hashchange', updateLinks);
+  document.addEventListener('click', function (event) { if (!menu.contains(event.target)) menu.open = false; });
+  menu.addEventListener('keydown', function (event) { if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary').focus(); } });
+})();
+</script></body></html>
