@@ -333,6 +333,9 @@ html:not(.js) [data-loop-toggle] { display: none; }
 .person { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 5fr); gap: var(--space-lg); border-top: var(--rule-box) solid var(--color-ink); padding-top: var(--space-lg); scroll-margin-top: var(--space-3xl); align-content: start; }
 .person__portrait { margin: 0; }
 .person__portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 25%; border: var(--rule-bar) solid var(--color-ink); }
+/* Frame Eva's supplied full-length photograph without altering the original. */
+#eva-willis .person__portrait { overflow: hidden; aspect-ratio: 4 / 5; border: var(--rule-bar) solid var(--color-ink); }
+#eva-willis .person__portrait img { display: block; height: 100%; border: 0; transform: scale(2); transform-origin: 55% 25%; }
 .person__missing { display: grid; place-content: center; aspect-ratio: 4 / 5; padding: var(--space-md); background: var(--color-paper-2); color: var(--color-muted); font-size: var(--text-sm); text-align: center; }
 .person__body { min-width: 0; display: grid; gap: var(--space-md); align-content: start; }
 .person h2 { font-size: var(--text-title); line-height: 1.15; text-transform: none; text-wrap: initial; }
