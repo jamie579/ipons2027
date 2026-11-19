@@ -420,6 +420,19 @@ html:not(.js) [data-loop-toggle] { display: none; }
 .detail-footer .foot__links { margin-top: 0; }
 .detail-contact { margin-top: var(--space-xl); overflow-wrap: anywhere; }
 .detail-credits:empty { display: none; }
+.travel-discounts { min-width: 0; }
+.travel-discounts h3 { font: 700 var(--text-xl)/1.2 var(--font-display); }
+.travel-discounts > p { max-width: 72ch; margin-block: var(--space-md) var(--space-lg); }
+.travel-discounts details { border-top: 1px solid var(--color-muted); }
+.travel-discounts details:last-child { border-bottom: 1px solid var(--color-muted); }
+.travel-discounts summary { padding-block: var(--space-md); cursor: pointer; font-weight: 600; }
+.travel-discounts summary:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+.travel-discounts__body { display: grid; gap: var(--space-md); padding-block: var(--space-xs) var(--space-lg); max-width: 76ch; }
+.travel-discounts details:not([open]) .travel-discounts__body { display: none; }
+.travel-discounts__body p { max-width: none; }
+.travel-discounts__body ul { list-style: disc; padding-inline-start: 1.4em; }
+.travel-discounts__body li + li { margin-top: var(--space-sm); }
+.travel-discounts__note { color: var(--color-muted); font-size: var(--text-sm); }
 @media (max-width: 40rem) {
   .detail-hero, .detail-content .section { padding-block: 32px; }
   .detail-content .sday__head { min-height: 0; padding: var(--space-md); }
@@ -557,7 +570,7 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
         <p class="lead">Les informations pratiques seront ajoutées au fur et à mesure de leur confirmation.</p>
       </div>
       <div class="cells cells--2">
-        <div class="cell"><h3>Venir sur place</h3><p>Depuis Hauptbahnhof, prenez le bus 147 jusqu’à l’arrêt du campus de Charité, ou le tram M5, M8 ou M10 jusqu’à Invalidenpark, puis marchez une dizaine de minutes. Depuis l’aéroport, un train régional ou le S9 dessert Hauptbahnhof ou Friedrichstraße. Utilisez l’entrée E pour les bâtiments Hertwig et Waldeyer.</p><p>Consultez <a href="https://www.bvg.de/">bvg.de</a> pour les horaires à jour et la <a href="https://www.charite.de/en/charite/campuses/campus_charite_mitte/">page du campus de Charité</a> pour le plan et les entrées.</p></div>
+        <div class="cell"><h3>Venir sur place</h3><p>Depuis Hauptbahnhof, prenez le bus 147 jusqu’à l’arrêt du campus de Charité, ou le tram M5, M8 ou M10 jusqu’à Invalidenpark, puis marchez une dizaine de minutes. Depuis l’aéroport, un train régional ou le S9 dessert Hauptbahnhof ou Friedrichstraße. Utilisez l’entrée E pour les bâtiments Hertwig et Waldeyer.</p><p>Consultez <a href="https://www.bvg.de/">bvg.de</a> pour les horaires à jour et la <a href="https://www.charite.de/en/charite/campuses/campus_charite_mitte/">page du campus de Charité</a> pour le plan et les entrées.</p><p><a href="#flight-discounts">Réductions sur les vols pour les participants à la conférence</a></p></div>
         <div class="cell"><h3>Se loger</h3><p><span class="fill" data-fill="stay">Des suggestions à proximité du campus seront proposées lors de l’ouverture des inscriptions</span></p></div>
         <div class="cell registration-summary" id="registration"><h3>Inscription et tarifs</h3><p>Les inscriptions ouvrent le 1er décembre 2026.</p><table class="registration-fees"><caption>Frais d’inscription par personne.</caption><thead><tr><th scope="col">Catégorie de billet</th><th scope="col">Tarif</th></tr></thead><tbody><tr><th scope="row">En présentiel — non-membre</th><td><strong class="fee-primary">US$450</strong><span class="fee-equivalents"><span data-currency="EUR">≈ €410</span><span data-currency="GBP">≈ £342</span><span data-currency="CAD">≈ CA$644</span></span></td></tr>
 <tr><th scope="row">En présentiel — membre de l’IPONS</th><td><strong class="fee-primary">US$400</strong><span class="fee-equivalents"><span data-currency="EUR">≈ €365</span><span data-currency="GBP">≈ £304</span><span data-currency="CAD">≈ CA$572</span></span></td></tr>
@@ -565,6 +578,39 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 <tr><th scope="row">En ligne</th><td><strong class="fee-primary">US$100</strong><span class="fee-equivalents"><span data-currency="EUR">≈ €91</span><span data-currency="GBP">≈ £76</span><span data-currency="CAD">≈ CA$143</span></span></td></tr></tbody></table><div class="registration-fee-notes"><p class="registration-currency-note">Les tarifs de base sont en USD. Les montants en EUR, GBP et CAD sont approximatifs et arrondis à l’unité, selon les <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">taux de la BCE du 18 novembre 2026</a>. Les taux de change peuvent évoluer.</p><p>Les modalités des tarifs réduits pour les étudiantes et étudiants et les personnes venant de pays à revenu faible ou intermédiaire seront annoncées à l’ouverture des inscriptions.</p></div><p><a href="/fr/register/">Modalités d’inscription</a></p><p>Vous n’êtes pas membre ? <a href="https://ipons.online/members/join-ipons/">Adhérez à l’IPONS</a>.</p></div>
         <div class="cell" id="accessibility"><h3>Accessibilité</h3><p>Toutes les sessions seront sous-titrées. Nous travaillerons avec vous sur l’accessibilité, que vous participiez à Berlin ou en ligne. Pour discuter de vos besoins linguistiques ou d’autres besoins d’accès, veuillez contacter <a href="mailto:contact@ipons2027.com">contact@ipons2027.com</a>.</p></div>
       </div>
+      <section class="travel-discounts" id="flight-discounts" aria-labelledby="flight-discounts-title">
+        <h3 id="flight-discounts-title">Réductions sur les vols</h3>
+        <p>Deux offres aériennes sont proposées pour les déplacements à la conférence à Berlin. Comparez le prix final et les conditions tarifaires avant de réserver.</p>
+        <details>
+          <summary>United Airlines et certains partenaires Star Alliance</summary>
+          <div class="travel-discounts__body">
+            <p>Généralement <strong>2 à 7 % de réduction sur les tarifs de base éligibles</strong> pour les voyages à destination de <strong>Berlin Brandenburg (BER), du 25 juillet au 2 août 2027</strong>. La réduction dépend de l’itinéraire et de la classe tarifaire.</p>
+            <p>Réservez via <a href="https://www.united.com/meetingtravel">United Meetings</a> et saisissez <strong>ZTGT220838</strong> (sans espaces) lors de la recherche de vols. Utilisez le code avant l’achat ; les réductions ne peuvent pas être appliquées rétroactivement.</p>
+            <p>Outre United et United Express, l’accord couvre les compagnies partenaires suivantes sur les itinéraires éligibles :</p>
+            <ul>
+              <li><strong>Vols transatlantiques :</strong> Air Canada, Austrian Airlines, Brussels Airlines, Lufthansa et SWISS. Discover Airlines est également incluse.</li>
+              <li><strong>Vols transpacifiques en partage de code United :</strong> ANA (All Nippon Airways) et Air New Zealand. Les tarifs au départ du Japon sont exclus de cette offre transpacifique.</li>
+            </ul>
+            <p>Les vols partenaires réservés en ligne via United doivent porter un numéro de vol United (UA). L’éligibilité dépend de l’itinéraire, de la combinaison de compagnies et de la classe tarifaire ; les tarifs Basic, taxes, surcharges et services supplémentaires sont exclus.</p>
+            <p>Pour une réservation en agence, indiquez <strong>Z Code ZTGT</strong> et <strong>Agreement Code 220838</strong>. Le code de compte de l’agence est <strong>MTG99</strong>.</p>
+            <p class="travel-discounts__note">L’accord prend effet le 1er janvier 2027. Pour une réservation antérieure à cette date, vérifiez que le code est accepté avant de payer.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Air France–KLM Global Meetings &amp; Events</summary>
+          <div class="travel-discounts__body">
+            <p><strong>10 % de réduction sur les tarifs de base éligibles</strong> pour les déplacements à la conférence entre le <strong>21 juillet et le 6 août 2027</strong>.</p>
+            <ul>
+              <li><strong>Paiement en EUR :</strong> réservez sur <a href="https://www.airfrance.com/">airfrance.com</a> ou <a href="https://www.klm.com/">klm.com</a> avec le code <strong>GME62395EU</strong>.</li>
+              <li><strong>Paiement en USD :</strong> réservez sur <a href="https://www.airfrance.us/">airfrance.us</a> ou <a href="https://www.klm.us/">klm.us</a> avec le code <strong>GME62395US</strong>.</li>
+            </ul>
+            <p>Lors de la saisie des informations passager, sélectionnez <strong>« Oui » pour un voyage professionnel</strong>. Indiquez votre numéro Bluebiz ou l’OIN de votre entreprise si vous en avez un ; sinon, saisissez <strong>MICE</strong> dans le champ « Nom du contrat ».</p>
+            <p>Après avoir renseigné vos informations et vérifié l’itinéraire, saisissez le code correspondant dans le champ <strong>« Avez-vous un code de réduction ? »</strong>, puis sélectionnez <strong>« Appliquer »</strong>.</p>
+            <p>Le tarif de base, hors taxes et surcharges, doit dépasser <strong>140 € pour les vols en Europe</strong> ou <strong>170 € pour les vols intercontinentaux</strong> (75 € pour les vols intérieurs en France), ou l’équivalent dans la devise de réservation. La réduction s’applique aux tarifs éligibles et exclut les taxes et surcharges.</p>
+            <p>Pour une réservation auprès d’une agence de voyages IATA, indiquez le <strong>code événement 62395AF</strong>.</p>
+          </div>
+        </details>
+      </section>
     </div>
   </section>
 
