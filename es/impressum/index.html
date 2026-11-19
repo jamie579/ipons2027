@@ -203,13 +203,21 @@ button, input, select, textarea { font: inherit; }
 
 /* Shared navigation for the complete public conference site. */
 .public-header { background: var(--color-paper); border-bottom: var(--rule-bar) solid var(--color-ink); }
-.public-header__row { display: grid; grid-template-columns: minmax(13rem, 1fr) auto auto; align-items: center; gap: var(--space-lg); padding-block: var(--space-md); }
-.public-header__brand { max-width: 29ch; }
+.public-header__row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem) auto; align-items: center; gap: var(--space-sm) var(--space-lg); padding-block: var(--space-md); }
+.public-header__brand { max-width: 29ch; min-width: 0; }
+.public-header__affiliations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: var(--space-md); min-width: 0; }
+.public-header__institution { display: grid; grid-template-rows: 1fr auto; gap: var(--space-xs); justify-items: start; }
+.public-header__institution > span { font-size: var(--text-sm); line-height: 1.3; }
+.public-header__institution a { display: flex; align-items: center; min-height: 44px; max-width: 100%; }
+.public-header__institution img { display: block; max-width: 100%; height: auto; }
+.public-header__charite { width: 100px; }
+.public-header__ipons { width: 120px; }
+.public-nav { grid-column: 1 / -1; grid-row: 2; }
 .public-nav ul { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs) var(--space-lg); }
 .public-nav a { display: inline-flex; align-items: center; min-height: 36px; font-size: var(--text-sm); font-weight: 600; text-decoration: none; }
 .public-nav a:hover, .public-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
-.public-header__action { padding-inline: var(--space-md); font-size: var(--text-sm); }
-.public-header__controls { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-xs); min-width: 0; }
+.public-header__action { grid-column: 3; grid-row: 1; padding-inline: var(--space-md); font-size: var(--text-sm); }
+.public-header__controls { grid-column: 3; grid-row: 1; display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-xs); min-width: 0; }
 .language-switcher { position: relative; font-size: var(--text-sm); font-weight: 600; }
 .language-switcher summary { display: flex; align-items: center; gap: var(--space-xs); min-height: 32px; padding: var(--space-2xs) var(--space-xs); cursor: pointer; list-style: none; }
 .language-switcher summary::-webkit-details-marker { display: none; }
@@ -227,16 +235,20 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 .public-footer p, .public-footer details { max-width: 85ch; font-size: var(--text-sm); }
 .public-footer p + p, .public-footer details { margin-top: var(--space-sm); }
 .public-footer .foot__credits { margin-top: var(--space-lg); }
-@media (max-width: 75rem) {
+@media (max-width: 60rem) {
   .public-header__row { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-sm) var(--space-lg); }
   .public-header__action { grid-column: 2; grid-row: 1; }
   .public-header__controls { grid-column: 2; grid-row: 1; }
-  .public-nav { grid-column: 1 / -1; grid-row: 2; }
+  .public-header__affiliations { grid-column: 1 / -1; grid-row: 2; width: 100%; max-width: 22rem; }
+  .public-nav { grid-row: 3; }
 }
 @media (max-width: 40rem) {
   .public-header__row { column-gap: var(--space-sm); padding-block: var(--space-sm); }
-  .public-header__brand { font-size: var(--text-md); }
-  .public-header__action { max-width: 9rem; padding-inline: var(--space-xs); white-space: normal; text-align: center; line-height: 1.2; }
+  .public-header__brand { grid-column: 1 / -1; max-width: none; font-size: var(--text-md); }
+  .public-header__action { grid-column: 1 / -1; grid-row: 3; max-width: 9rem; padding-inline: var(--space-xs); white-space: normal; text-align: center; line-height: 1.2; }
+  .public-header__controls { grid-column: 1 / -1; grid-row: 3; flex-direction: row; align-items: center; justify-content: space-between; }
+  .public-nav { grid-row: 4; }
+  .language-switcher nav { right: auto; left: 0; }
   .public-nav ul { gap: 0 var(--space-md); }
   .public-footer__links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -253,7 +265,18 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="public-header">
   <div class="container public-header__row">
-    <a class="wordmark public-header__brand" href="/es/" aria-label="Inicio del congreso IPONS 2027">Congreso Internacional de Filosofía de la Enfermería</a>
+    <a class="wordmark public-header__brand" href="/es/">29.º Congreso Internacional de Filosofía de la Enfermería</a>
+    <div class="public-header__affiliations">
+      <div class="public-header__institution">
+        <span>Organizado por</span>
+        <a href="https://www.charite.de/en/"><img class="public-header__charite" src="/img/affiliations/charite.svg" alt="Charité – Universitätsmedizin Berlin" width="2000" height="735"></a>
+      </div>
+      <div class="public-header__institution">
+        <span>En colaboración con</span>
+        <a href="https://ipons.online/"><img class="public-header__ipons" src="/img/affiliations/ipons.png" alt="International Philosophy of Nursing Society (IPONS)" width="1024" height="341"></a>
+      </div>
+    </div>
+    <div class="public-header__controls"><details class="language-switcher"><summary aria-label="Elegir idioma"><span aria-hidden="true">🇪🇸</span> <span lang="es">Español</span><span class="language-switcher__chevron" aria-hidden="true"></span></summary><nav aria-label="Elegir idioma"><ul><li><a href="/impressum/" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span> English</a></li><li><a href="/de/impressum/" lang="de" hreflang="de"><span aria-hidden="true">🇩🇪</span> Deutsch</a></li><li><a href="/fr/impressum/" lang="fr" hreflang="fr"><span aria-hidden="true">🇫🇷</span> Français</a></li><li><a href="/es/impressum/" lang="es" hreflang="es" aria-current="true"><span aria-hidden="true">🇪🇸</span> Español</a></li></ul></nav></details><a class="btn btn--quiet public-header__action" href="/es/submit/">Envíe su trabajo</a></div>
     <nav class="public-nav" aria-label="Navegación del congreso">
       <ul>
         <li><a href="/es/call/">Tema y convocatoria</a></li>
@@ -264,7 +287,6 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
         <li><a href="/es/support/">Apoyo</a></li>
       </ul>
     </nav>
-    <div class="public-header__controls"><details class="language-switcher"><summary aria-label="Elegir idioma"><span aria-hidden="true">🇪🇸</span> <span lang="es">Español</span><span class="language-switcher__chevron" aria-hidden="true"></span></summary><nav aria-label="Elegir idioma"><ul><li><a href="/impressum/" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span> English</a></li><li><a href="/de/impressum/" lang="de" hreflang="de"><span aria-hidden="true">🇩🇪</span> Deutsch</a></li><li><a href="/fr/impressum/" lang="fr" hreflang="fr"><span aria-hidden="true">🇫🇷</span> Français</a></li><li><a href="/es/impressum/" lang="es" hreflang="es" aria-current="true"><span aria-hidden="true">🇪🇸</span> Español</a></li></ul></nav></details><a class="btn btn--quiet public-header__action" href="/es/submit/">Envíe su trabajo</a></div>
   </div>
 </header>
 
@@ -289,7 +311,7 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 <h3>Verbraucherstreitbeilegung (§ 36 VSBG)</h3>
 <p>Die Charité ist nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 <h3>Logo und Marke</h3>
-<p>Das Logo der Charité darf nur mit Genehmigung verwendet werden. Diese Website verwendet es nicht.</p>
+<p>Das Logo der Charité darf nur mit Genehmigung verwendet werden.</p>
 
 </section>
 <section data-legal-reading-aid="">
@@ -309,7 +331,7 @@ html:not([lang="en"]) .sub-hero h1 { font-size: clamp(2.5rem, 7vw, 7rem); }
 <h3>Resolución de litigios de consumo (§ 36 VSBG)</h3>
 <p>Charité no está dispuesta ni obligada a participar en procedimientos de resolución de litigios ante una junta de arbitraje de consumo.</p>
 <h3>Logotipo y marca</h3>
-<p>El logotipo de Charité solo puede utilizarse con autorización. Este sitio web no lo utiliza.</p>
+<p>El logotipo de Charité solo puede utilizarse con autorización.</p>
 
 </section>
 
